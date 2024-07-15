@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Registration Form</h2>
+        <form id="registrationForm">
+            
+            <div class="form-group">
+                <label for="name">NAME:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="registerNumber">REGISTER NUMBER:</label>
+                <input type="text" class="form-control" id="registerNumber" placeholder="Enter your register number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="class">CLASS:</label>
+                <input type="text" class="form-control" id="class" placeholder="Enter your class" required>
+            </div>
+
+            <div class="form-group">
+                <label for="department">DEPARTMENT:</label>
+                <input type="text" class="form-control" id="department" placeholder="Enter your department" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-MAIL:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required oninput="hideEmailError()">  
+                <!-- WE USE ONINPUT METHOD SO THAT WHEN WE START TO TYPE THE ERROR MSG WILL NOT DISPLAY -->
+                <p id="emailError" class="text-danger" style="display: none;">Email is required</p>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">PHONE:</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+            </div>
+
+            <button type="button" class="btn btn-primary" onClick="checkEmail()">Submit</button>
+            
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function checkEmail() {
+            var email = document.getElementById('email').value;   
+            var emailError = document.getElementById('emailError');
+            if (email === '') {
+                emailError.style.display = 'block';
+            } else {
+                emailError.style.display = 'none';
+                document.getElementById('registrationForm').submit();
+            }
+        }
+
+        function hideEmailError() {
+            var emailError = document.getElementById('emailError');
+            emailError.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

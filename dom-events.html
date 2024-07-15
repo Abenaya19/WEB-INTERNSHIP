@@ -1,0 +1,65 @@
+<html>
+<body>
+       <!-- onClick() -->
+       <h1>Example:1</h1>
+       <h2>ABENAYA S</h2>
+       <h2>ASHIRA THASNEEM M</h2>
+       <h2 onclick="this.innerHTML='BEST FRIENDS!!!'">CLICK ME</h2>
+       <hr>
+
+       <!-- same method using js -->
+        <h1>Example:2</h1>
+       <h2 onclick="changeText(this)">Click on this text!</h2>
+       <script>
+       function changeText(id) 
+       {
+         id.innerHTML = "Ooops!";
+       }
+       </script>
+
+       <p>Click Me For Date</p>
+       <button onclick="displayDate()">DATE WITH TIME?</button>
+       <script>
+       function displayDate()
+       {
+         document.getElementById("demo").innerHTML = Date();
+       }
+       </script>
+       <p id="demo"></p>
+       <hr>
+
+       <!-- mouse hover method -->
+       <h1>Example:3</h1>
+       <h2>The onmouseover Attribute</h2>
+       <div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+       style="background-color:aqua;width:120px;height:20px;padding:40px;">
+       Mouse Over Me</div>
+       
+       <script>
+       function mOver(obj) 
+       {
+         obj.innerHTML = "Thank You"
+       }
+       
+       function mOut(obj) 
+       {
+         obj.innerHTML = "Mouse Over Me"
+       }
+       </script>
+       <hr>
+
+       <!-- onfocus  method -->
+        <body>
+        <h1>Example:4</h1>
+        <h2>The onfocus Attribute</h2>
+        Enter your name: <input type="text" onfocus="myFunction(this)">
+        <script>
+        function myFunction(x) 
+        {
+          x.style.background = "yellow";
+        }
+        </script>
+       
+
+</body>
+</html>
