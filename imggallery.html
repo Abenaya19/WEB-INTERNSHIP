@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAGE GALLERY</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        figcaption {
+            text-align: center; 
+            margin-top: 10px; 
+        }
+        /* when we hover the img will zoom */
+        .zoom-img {
+            transition: transform 0.2s ease;  
+        }
+        .zoom-img:hover {
+            transform: scale(1.2); 
+        }
+        body{
+            background-color: lightpink;
+        }
+        i{
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4"><u>Image Gallery!!!</u></h1>
+        <br><br>
+        <div class="row">
+            <div class="col-md-4">
+                <figure class="text-center">
+                    <img src="images/young-girl.webp" alt="myimg" class="img-fluid rounded zoom-img" width="200" height="200">
+                    <br><br>
+                    <figcaption class="mt-2"><em><b>LIVE! LOVE! LAUGH!</b></em></figcaption>
+                </figure>
+            </div>
+            <div class="col-md-4">
+                <figure class="text-center">
+                    <img src="images/parents.jpeg" alt="myimg" class="img-fluid rounded zoom-img" width="300" height="200">
+                    <br><br>
+                    <figcaption class="mt-2"><b>WHAT ELSE I COULD ASK FOR?</b></figcaption>
+                </figure>
+            </div>
+            <div class="col-md-4">
+                <figure class="text-center">
+                    <img src="images/womens.jpeg" alt="myimg" class="img-fluid rounded zoom-img" width="300" height="200">
+                    <br><br>
+                    <figcaption class="mt-2"><del>F.R.I.E.N.D.S!!!</del><b><ins> FAMILY!!!</ins></b></figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
